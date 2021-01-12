@@ -165,17 +165,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var html_to_image__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! html-to-image */ "53SV");
 /* harmony import */ var localforage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! localforage */ "oAJy");
 /* harmony import */ var localforage__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(localforage__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _array_sort_pipe__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./array-sort-pipe */ "J8xh");
-/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/card */ "Wp6s");
-/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/button */ "bTqV");
-/* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/material/icon */ "NFeN");
-/* harmony import */ var _auto_scale_auto_scale_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./auto-scale/auto-scale.component */ "0r8y");
-/* harmony import */ var _angular_material_tabs__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/material/tabs */ "wZkO");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/common */ "ofXK");
-/* harmony import */ var _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/checkbox */ "bSwM");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
-/* harmony import */ var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/material/form-field */ "kmnG");
-/* harmony import */ var _angular_material_input__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/material/input */ "qFsG");
+/* harmony import */ var _JSONCrush__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./JSONCrush */ "sSQm");
+/* harmony import */ var _array_sort_pipe__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./array-sort-pipe */ "J8xh");
+/* harmony import */ var _angular_cdk_clipboard__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/cdk/clipboard */ "UXJo");
+/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/material/card */ "Wp6s");
+/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/material/button */ "bTqV");
+/* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/material/icon */ "NFeN");
+/* harmony import */ var _auto_scale_auto_scale_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./auto-scale/auto-scale.component */ "0r8y");
+/* harmony import */ var _angular_material_tabs__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/tabs */ "wZkO");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/common */ "ofXK");
+/* harmony import */ var _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/material/checkbox */ "bSwM");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/material/form-field */ "kmnG");
+/* harmony import */ var _angular_material_input__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/material/input */ "qFsG");
+
+
 
 
 
@@ -197,28 +201,28 @@ __webpack_require__.r(__webpack_exports__);
 const _c0 = ["targetImage"];
 const _c1 = ["canvasElement"];
 const _c2 = ["holdingElement"];
-function AppComponent_ng_container_32_div_1_Template(rf, ctx) { if (rf & 1) {
+function AppComponent_ng_container_34_div_1_Template(rf, ctx) { if (rf & 1) {
     const _r10 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "mat-checkbox", 25);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("ngModelChange", function AppComponent_ng_container_32_div_1_Template_mat_checkbox_ngModelChange_1_listener($event) { const cssFilterEntry_r7 = ctx.$implicit; return cssFilterEntry_r7.enabled = $event; })("change", function AppComponent_ng_container_32_div_1_Template_mat_checkbox_change_1_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r10); const ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2); return ctx_r9.updateList(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "mat-checkbox", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("ngModelChange", function AppComponent_ng_container_34_div_1_Template_mat_checkbox_ngModelChange_1_listener($event) { const cssFilterEntry_r7 = ctx.$implicit; return cssFilterEntry_r7.enabled = $event; })("change", function AppComponent_ng_container_34_div_1_Template_mat_checkbox_change_1_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r10); const ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2); return ctx_r9.updateList(); });
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](3, "br");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "mat-form-field", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "mat-form-field", 27);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "mat-label");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](6, "Value");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "input", 30);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("ngModelChange", function AppComponent_ng_container_32_div_1_Template_input_ngModelChange_7_listener($event) { const cssFilterEntry_r7 = ctx.$implicit; return cssFilterEntry_r7.value = $event; })("change", function AppComponent_ng_container_32_div_1_Template_input_change_7_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r10); const ctx_r12 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2); return ctx_r12.updateList(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "input", 31);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("ngModelChange", function AppComponent_ng_container_34_div_1_Template_input_ngModelChange_7_listener($event) { const cssFilterEntry_r7 = ctx.$implicit; return cssFilterEntry_r7.value = $event; })("change", function AppComponent_ng_container_34_div_1_Template_input_change_7_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r10); const ctx_r12 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2); return ctx_r12.updateList(); });
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "mat-form-field", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "mat-form-field", 27);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "mat-label");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](10, "Order");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](11, "input", 31);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("ngModelChange", function AppComponent_ng_container_32_div_1_Template_input_ngModelChange_11_listener($event) { const cssFilterEntry_r7 = ctx.$implicit; return cssFilterEntry_r7.order = $event; })("change", function AppComponent_ng_container_32_div_1_Template_input_change_11_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r10); const ctx_r14 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2); return ctx_r14.updateList(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](11, "input", 32);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("ngModelChange", function AppComponent_ng_container_34_div_1_Template_input_ngModelChange_11_listener($event) { const cssFilterEntry_r7 = ctx.$implicit; return cssFilterEntry_r7.order = $event; })("change", function AppComponent_ng_container_34_div_1_Template_input_change_11_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r10); const ctx_r14 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2); return ctx_r14.updateList(); });
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
@@ -233,9 +237,9 @@ function AppComponent_ng_container_32_div_1_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngModel", cssFilterEntry_r7.order);
 } }
-function AppComponent_ng_container_32_Template(rf, ctx) { if (rf & 1) {
+function AppComponent_ng_container_34_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementContainerStart"](0);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, AppComponent_ng_container_32_div_1_Template, 12, 4, "div", 29);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, AppComponent_ng_container_34_div_1_Template, 12, 4, "div", 30);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementContainerEnd"]();
 } if (rf & 2) {
     const filterArray_r5 = ctx.ngIf;
@@ -312,9 +316,10 @@ function createDefaultCssFilters() {
     ];
 }
 class AppComponent {
-    constructor(arraySortingPipe, cd) {
+    constructor(arraySortingPipe, cd, clipboard) {
         this.arraySortingPipe = arraySortingPipe;
         this.cd = cd;
+        this.clipboard = clipboard;
         this.cssFilterSubject$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
         this.updateOtherOptionsSubject$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](null);
         // tslint:disable-next-line:variable-name
@@ -410,17 +415,40 @@ class AppComponent {
         link.click();
     }
     ngOnInit() {
-        var _a, _b, _c;
+        var _a, _b, _c, _d, _e;
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             const lastImage = (_a = yield localforage__WEBPACK_IMPORTED_MODULE_5__["getItem"]('current_image')) !== null && _a !== void 0 ? _a : '';
             this.imagePath = lastImage;
-            this.optionsState = (_b = yield localforage__WEBPACK_IMPORTED_MODULE_5__["getItem"]('options_state')) !== null && _b !== void 0 ? _b : DEFAULT_OPTIONS_STATE;
-            const savedCssFilters = (_c = yield localforage__WEBPACK_IMPORTED_MODULE_5__["getItem"]('css_filters')) !== null && _c !== void 0 ? _c : createDefaultCssFilters();
+            const urlParams = new URLSearchParams(window.location.search);
+            const preset = urlParams.get('preset');
+            const uncrushedPreset = Object(_JSONCrush__WEBPACK_IMPORTED_MODULE_6__["JSONUncrush"])(preset);
+            const data = JSON.parse(uncrushedPreset);
+            console.info(data);
+            this.optionsState = (_c = (_b = data === null || data === void 0 ? void 0 : data.options) !== null && _b !== void 0 ? _b : yield localforage__WEBPACK_IMPORTED_MODULE_5__["getItem"]('options_state')) !== null && _c !== void 0 ? _c : DEFAULT_OPTIONS_STATE;
+            const savedCssFilters = (_e = (_d = data === null || data === void 0 ? void 0 : data.cssFilters) !== null && _d !== void 0 ? _d : yield localforage__WEBPACK_IMPORTED_MODULE_5__["getItem"]('css_filters')) !== null && _e !== void 0 ? _e : createDefaultCssFilters();
             this.cssFilterSubject$.next(savedCssFilters);
         });
     }
+    copyShareLink() {
+        const shareableData = {
+            cssFilters: this.cssFilterSubject$.value,
+            options: this.optionsState
+        };
+        const json = JSON.stringify(shareableData);
+        // JSONCrush
+        const crushedJson = Object(_JSONCrush__WEBPACK_IMPORTED_MODULE_6__["JSONCrush"])(json);
+        const linkToShare = `${location.origin}${location.pathname}?preset=${crushedJson}`;
+        console.info({
+            json,
+            jsonLength: json.length,
+            crushedJson,
+            crushedLength: crushedJson.length,
+            linkToShare
+        });
+        this.clipboard.copy(linkToShare);
+    }
 }
-AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_array_sort_pipe__WEBPACK_IMPORTED_MODULE_6__["ArraySortPipe"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"])); };
+AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_array_sort_pipe__WEBPACK_IMPORTED_MODULE_7__["ArraySortPipe"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_cdk_clipboard__WEBPACK_IMPORTED_MODULE_8__["Clipboard"])); };
 AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], viewQuery: function AppComponent_Query(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵviewQuery"](_c0, true);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵviewQuery"](_c1, true);
@@ -430,7 +458,7 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.image = _t.first);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.canvas = _t.first);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.holding = _t.first);
-    } }, decls: 60, vars: 34, consts: [[1, "columns"], [1, "column", "flex_cards", "sticky_top", 2, "align-self", "flex-start"], [1, "example-card"], [1, "flex_center"], ["mat-stroked-button", "", "color", "primary", 3, "click"], ["svgIcon", "search"], ["mat-card-image", "", 3, "width", "height"], [3, "src"], ["id", "src", "type", "file", 2, "display", "none", 3, "change"], ["inputElement", ""], [1, "zoom_out", 2, "display", "none", 3, "width", "height"], ["canvasElement", ""], ["mat-stroked-button", "", "color", "accent", 3, "disabled", "click"], [3, "width", "height"], [1, "holding_parent"], ["holdingElement", ""], [1, "absolute"], ["targetImage", ""], [1, "absolute", 2, "z-index", "-1"], [1, "column"], [1, "tab_group_height"], ["label", "CSS Filters", 1, "flex_rows"], [4, "ngIf"], ["label", "Overlay & Background"], [1, "flex_rows"], [3, "ngModel", "ngModelChange", "change"], ["appearance", "outline"], ["type", "number", "matInput", "", 3, "max", "min", "ngModel", "change", "ngModelChange"], ["matInput", "", 2, "min-height", "6rem", 3, "ngModel", "change", "ngModelChange"], [4, "ngFor", "ngForOf", "ngForTrackBy"], ["type", "text", "matInput", "", 3, "ngModel", "ngModelChange", "change"], ["type", "number", "matInput", "", 3, "ngModel", "ngModelChange", "change"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, decls: 62, vars: 34, consts: [[1, "columns"], [1, "column", "flex_cards", "sticky_top", 2, "align-self", "flex-start"], [1, "example-card"], [1, "flex_center"], ["mat-stroked-button", "", "color", "primary", 3, "click"], ["svgIcon", "search"], ["mat-card-image", "", 3, "width", "height"], [3, "src"], ["id", "src", "type", "file", 2, "display", "none", 3, "change"], ["inputElement", ""], [1, "zoom_out", 2, "display", "none", 3, "width", "height"], ["canvasElement", ""], ["mat-stroked-button", "", "color", "accent", 3, "disabled", "click"], [3, "width", "height"], [1, "holding_parent"], ["holdingElement", ""], [1, "absolute"], ["targetImage", ""], [1, "absolute", 2, "z-index", "-1"], ["mat-raised-button", "", 3, "click"], [1, "column"], [1, "tab_group_height"], ["label", "CSS Filters", 1, "flex_rows"], [4, "ngIf"], ["label", "Overlay & Background"], [1, "flex_rows"], [3, "ngModel", "ngModelChange", "change"], ["appearance", "outline"], ["type", "number", "matInput", "", 3, "max", "min", "ngModel", "change", "ngModelChange"], ["matInput", "", 2, "min-height", "6rem", 3, "ngModel", "change", "ngModelChange"], [4, "ngFor", "ngForOf", "ngForTrackBy"], ["type", "text", "matInput", "", 3, "ngModel", "ngModelChange", "change"], ["type", "number", "matInput", "", 3, "ngModel", "ngModelChange", "change"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
         const _r15 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 1);
@@ -472,57 +500,61 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](29, "div", 19);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](30, "mat-tab-group", 20);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](31, "mat-tab", 21);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](32, AppComponent_ng_container_32_Template, 2, 2, "ng-container", 22);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](33, "async");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](34, "mat-tab", 23);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](35, "div", 24);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](36, "h3");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](37, "Custom CSS Above the Image");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](38, "mat-checkbox", 25);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("ngModelChange", function AppComponent_Template_mat_checkbox_ngModelChange_38_listener($event) { return ctx.optionsState.useMask = $event; })("change", function AppComponent_Template_mat_checkbox_change_38_listener() { return ctx.updateOtherOptions(); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](39, " Use the source image as mask ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](40, "mat-form-field", 26);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](41, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](42, "Opacity");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](43, "input", 27);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("change", function AppComponent_Template_input_change_43_listener() { return ctx.updateOtherOptions(); })("ngModelChange", function AppComponent_Template_input_ngModelChange_43_listener($event) { return ctx.optionsState.opacity = $event; });
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](29, "button", 19);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function AppComponent_Template_button_click_29_listener() { return ctx.copyShareLink(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](30, "Copy Link");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](44, "mat-checkbox", 25);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("ngModelChange", function AppComponent_Template_mat_checkbox_ngModelChange_44_listener($event) { return ctx.optionsState.useCustomCssAboveImage = $event; })("change", function AppComponent_Template_mat_checkbox_change_44_listener() { return ctx.updateOtherOptions(); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](45, " Use custom CSS above the image ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](31, "div", 20);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](32, "mat-tab-group", 21);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](33, "mat-tab", 22);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](34, AppComponent_ng_container_34_Template, 2, 2, "ng-container", 23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](35, "async");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](46, "mat-form-field", 26);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](47, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](48, "Custom CSS above the image");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](36, "mat-tab", 24);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](37, "div", 25);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](38, "h3");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](39, "Custom CSS Above the Image");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](49, "textarea", 28);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("change", function AppComponent_Template_textarea_change_49_listener() { return ctx.updateOtherOptions(); })("ngModelChange", function AppComponent_Template_textarea_ngModelChange_49_listener($event) { return ctx.optionsState.customCssAboveImage = $event; });
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](50, "\n    ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](40, "mat-checkbox", 26);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("ngModelChange", function AppComponent_Template_mat_checkbox_ngModelChange_40_listener($event) { return ctx.optionsState.useMask = $event; })("change", function AppComponent_Template_mat_checkbox_change_40_listener() { return ctx.updateOtherOptions(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](41, " Use the source image as mask ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](42, "mat-form-field", 27);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](43, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](44, "Opacity");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](45, "input", 28);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("change", function AppComponent_Template_input_change_45_listener() { return ctx.updateOtherOptions(); })("ngModelChange", function AppComponent_Template_input_ngModelChange_45_listener($event) { return ctx.optionsState.opacity = $event; });
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](51, "h3");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](52, "Custom CSS Below the Image");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](46, "mat-checkbox", 26);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("ngModelChange", function AppComponent_Template_mat_checkbox_ngModelChange_46_listener($event) { return ctx.optionsState.useCustomCssAboveImage = $event; })("change", function AppComponent_Template_mat_checkbox_change_46_listener() { return ctx.updateOtherOptions(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](47, " Use custom CSS above the image ");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](53, "mat-checkbox", 25);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("ngModelChange", function AppComponent_Template_mat_checkbox_ngModelChange_53_listener($event) { return ctx.optionsState.useCustomCssBelowImage = $event; })("change", function AppComponent_Template_mat_checkbox_change_53_listener() { return ctx.updateOtherOptions(); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](54, " Use custom CSS below the image ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](48, "mat-form-field", 27);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](49, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](50, "Custom CSS above the image");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](55, "mat-form-field", 26);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](56, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](57, "Custom CSS below the image");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](51, "textarea", 29);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("change", function AppComponent_Template_textarea_change_51_listener() { return ctx.updateOtherOptions(); })("ngModelChange", function AppComponent_Template_textarea_ngModelChange_51_listener($event) { return ctx.optionsState.customCssAboveImage = $event; });
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](52, "\n    ");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](58, "textarea", 28);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("change", function AppComponent_Template_textarea_change_58_listener() { return ctx.updateOtherOptions(); })("ngModelChange", function AppComponent_Template_textarea_ngModelChange_58_listener($event) { return ctx.optionsState.customCssBelowImage = $event; });
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](59, "\n    ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](53, "h3");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](54, "Custom CSS Below the Image");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](55, "mat-checkbox", 26);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("ngModelChange", function AppComponent_Template_mat_checkbox_ngModelChange_55_listener($event) { return ctx.optionsState.useCustomCssBelowImage = $event; })("change", function AppComponent_Template_mat_checkbox_change_55_listener() { return ctx.updateOtherOptions(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](56, " Use custom CSS below the image ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](57, "mat-form-field", 27);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](58, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](59, "Custom CSS below the image");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](60, "textarea", 29);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("change", function AppComponent_Template_textarea_change_60_listener() { return ctx.updateOtherOptions(); })("ngModelChange", function AppComponent_Template_textarea_ngModelChange_60_listener($event) { return ctx.optionsState.customCssBelowImage = $event; });
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](61, "\n    ");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
@@ -551,8 +583,8 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("src", ctx.imagePath, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsanitizeUrl"]);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵstyleMap"](ctx.optionsState.useCustomCssBelowImage ? ctx.optionsState.customCssBelowImage : null);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](33, 32, ctx.cssFilterArray$));
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](35, 32, ctx.cssFilterArray$));
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](6);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngModel", ctx.optionsState.useMask);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](5);
@@ -565,7 +597,7 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngModel", ctx.optionsState.useCustomCssBelowImage);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](5);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngModel", ctx.optionsState.customCssBelowImage);
-    } }, directives: [_angular_material_card__WEBPACK_IMPORTED_MODULE_7__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_7__["MatCardHeader"], _angular_material_card__WEBPACK_IMPORTED_MODULE_7__["MatCardTitle"], _angular_material_button__WEBPACK_IMPORTED_MODULE_8__["MatButton"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_9__["MatIcon"], _auto_scale_auto_scale_component__WEBPACK_IMPORTED_MODULE_10__["AutoScaleComponent"], _angular_material_card__WEBPACK_IMPORTED_MODULE_7__["MatCardImage"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_11__["MatTabGroup"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_11__["MatTab"], _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgIf"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_13__["MatCheckbox"], _angular_forms__WEBPACK_IMPORTED_MODULE_14__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_14__["NgModel"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__["MatLabel"], _angular_forms__WEBPACK_IMPORTED_MODULE_14__["NumberValueAccessor"], _angular_material_input__WEBPACK_IMPORTED_MODULE_16__["MatInput"], _angular_forms__WEBPACK_IMPORTED_MODULE_14__["DefaultValueAccessor"], _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgForOf"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_12__["AsyncPipe"]], styles: ["[_nghost-%COMP%] {\n  display: block;\n  padding: 1rem;\n  height: calc(100vh - 2rem);\n}\n\n.rgb_wheel[_ngcontent-%COMP%] {\n  background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);\n  opacity: 50%;\n}\n\n.absolute[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n}\n\n.holding_parent[_ngcontent-%COMP%] {\n  position: relative;\n  display: inline-block;\n}\n\n.sticky_top[_ngcontent-%COMP%] {\n  position: sticky;\n  top: 0;\n  width: 100%;\n  z-index: 10;\n}\n\n.columns[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n}\n\n.column[_ngcontent-%COMP%] {\n  flex: 1;\n}\n\n.flex_cards[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  align-items: center;\n  gap: 1rem;\n  flex-wrap: wrap;\n}\n\n.flex_center[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  gap: 1rem;\n}\n\n.flex_center_column[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n}\n\n.flex_rows[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  align-self: flex-start;\n  height: 100%;\n}\n\napp-auto-scale[_ngcontent-%COMP%] {\n  padding: 1rem;\n}\n\n.tab_group_height[_ngcontent-%COMP%] {\n  max-height: calc(100vh - 4rem);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL2FwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGNBQUE7RUFDQSxhQUFBO0VBQ0EsMEJBQUE7QUFDRjs7QUFFQTtFQUNFLHVFQUFBO0VBQ0EsWUFBQTtBQUNGOztBQUVBO0VBQ0Usa0JBQUE7RUFDQSxNQUFBO0VBQ0EsT0FBQTtFQUNBLFdBQUE7RUFDQSxZQUFBO0FBQ0Y7O0FBRUE7RUFDRSxrQkFBQTtFQUNBLHFCQUFBO0FBQ0Y7O0FBRUE7RUFDRSxnQkFBQTtFQUNBLE1BQUE7RUFDQSxXQUFBO0VBQ0EsV0FBQTtBQUNGOztBQUVBO0VBQ0UsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsbUJBQUE7QUFDRjs7QUFFQTtFQUNFLE9BQUE7QUFDRjs7QUFHQTtFQUNFLGFBQUE7RUFDQSx1QkFBQTtFQUNBLHNCQUFBO0VBQ0EsbUJBQUE7RUFDQSxTQUFBO0VBQ0EsZUFBQTtBQUFGOztBQUdBO0VBQ0UsYUFBQTtFQUNBLHVCQUFBO0VBQ0EsbUJBQUE7RUFDQSxTQUFBO0FBQUY7O0FBR0E7RUFDRSxhQUFBO0VBQ0EsdUJBQUE7RUFDQSxtQkFBQTtFQUNBLHNCQUFBO0FBQUY7O0FBR0E7RUFDRSxhQUFBO0VBQ0Esc0JBQUE7RUFDQSxzQkFBQTtFQUNBLFlBQUE7QUFBRjs7QUFHQTtFQUNFLGFBQUE7QUFBRjs7QUFHQTtFQUNFLDhCQUFBO0FBQUYiLCJmaWxlIjoiYXBwLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiOmhvc3Qge1xuICBkaXNwbGF5OiBibG9jaztcbiAgcGFkZGluZzogMXJlbTtcbiAgaGVpZ2h0OiBjYWxjKDEwMHZoIC0gMnJlbSk7XG59XG5cbi5yZ2Jfd2hlZWwge1xuICBiYWNrZ3JvdW5kOiBjb25pYy1ncmFkaWVudChyZWQsIHllbGxvdywgbGltZSwgYXF1YSwgYmx1ZSwgbWFnZW50YSwgcmVkKTtcbiAgb3BhY2l0eTogNTAlO1xufVxuXG4uYWJzb2x1dGUge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMDtcbiAgbGVmdDogMDtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwJTtcbn1cblxuLmhvbGRpbmdfcGFyZW50IHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG59XG5cbi5zdGlja3lfdG9wIHtcbiAgcG9zaXRpb246IHN0aWNreTtcbiAgdG9wOiAwO1xuICB3aWR0aDogMTAwJTtcbiAgei1pbmRleDogMTA7XG59XG5cbi5jb2x1bW5zIHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IHJvdztcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbn1cblxuLmNvbHVtbiB7XG4gIGZsZXg6IDE7XG5cbn1cblxuLmZsZXhfY2FyZHMge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgZ2FwOiAxcmVtO1xuICBmbGV4LXdyYXA6IHdyYXA7XG59XG5cbi5mbGV4X2NlbnRlciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBnYXA6IDFyZW07XG59XG5cbi5mbGV4X2NlbnRlcl9jb2x1bW4ge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbn1cblxuLmZsZXhfcm93cyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGFsaWduLXNlbGY6IGZsZXgtc3RhcnQ7XG4gIGhlaWdodDogMTAwJTtcbn1cblxuYXBwLWF1dG8tc2NhbGUge1xuICBwYWRkaW5nOiAxcmVtO1xufVxuXG4udGFiX2dyb3VwX2hlaWdodCB7XG4gIG1heC1oZWlnaHQ6IGNhbGMoMTAwdmggLSA0cmVtKTtcbn1cbiJdfQ== */"], changeDetection: 0 });
+    } }, directives: [_angular_material_card__WEBPACK_IMPORTED_MODULE_9__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_9__["MatCardHeader"], _angular_material_card__WEBPACK_IMPORTED_MODULE_9__["MatCardTitle"], _angular_material_button__WEBPACK_IMPORTED_MODULE_10__["MatButton"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_11__["MatIcon"], _auto_scale_auto_scale_component__WEBPACK_IMPORTED_MODULE_12__["AutoScaleComponent"], _angular_material_card__WEBPACK_IMPORTED_MODULE_9__["MatCardImage"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_13__["MatTabGroup"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_13__["MatTab"], _angular_common__WEBPACK_IMPORTED_MODULE_14__["NgIf"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_15__["MatCheckbox"], _angular_forms__WEBPACK_IMPORTED_MODULE_16__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_16__["NgModel"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_17__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_17__["MatLabel"], _angular_forms__WEBPACK_IMPORTED_MODULE_16__["NumberValueAccessor"], _angular_material_input__WEBPACK_IMPORTED_MODULE_18__["MatInput"], _angular_forms__WEBPACK_IMPORTED_MODULE_16__["DefaultValueAccessor"], _angular_common__WEBPACK_IMPORTED_MODULE_14__["NgForOf"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_14__["AsyncPipe"]], styles: ["[_nghost-%COMP%] {\n  display: block;\n  padding: 1rem;\n  height: calc(100vh - 2rem);\n}\n\n.rgb_wheel[_ngcontent-%COMP%] {\n  background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);\n  opacity: 50%;\n}\n\n.absolute[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n}\n\n.holding_parent[_ngcontent-%COMP%] {\n  position: relative;\n  display: inline-block;\n}\n\n.sticky_top[_ngcontent-%COMP%] {\n  position: sticky;\n  top: 0;\n  width: 100%;\n  z-index: 10;\n}\n\n.columns[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n}\n\n.column[_ngcontent-%COMP%] {\n  flex: 1;\n}\n\n.flex_cards[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  align-items: center;\n  gap: 1rem;\n  flex-wrap: wrap;\n}\n\n.flex_center[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  gap: 1rem;\n}\n\n.flex_center_column[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n}\n\n.flex_rows[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  align-self: flex-start;\n  height: 100%;\n}\n\napp-auto-scale[_ngcontent-%COMP%] {\n  padding: 1rem;\n}\n\n.tab_group_height[_ngcontent-%COMP%] {\n  max-height: calc(100vh - 4rem);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL2FwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGNBQUE7RUFDQSxhQUFBO0VBQ0EsMEJBQUE7QUFDRjs7QUFFQTtFQUNFLHVFQUFBO0VBQ0EsWUFBQTtBQUNGOztBQUVBO0VBQ0Usa0JBQUE7RUFDQSxNQUFBO0VBQ0EsT0FBQTtFQUNBLFdBQUE7RUFDQSxZQUFBO0FBQ0Y7O0FBRUE7RUFDRSxrQkFBQTtFQUNBLHFCQUFBO0FBQ0Y7O0FBRUE7RUFDRSxnQkFBQTtFQUNBLE1BQUE7RUFDQSxXQUFBO0VBQ0EsV0FBQTtBQUNGOztBQUVBO0VBQ0UsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsbUJBQUE7QUFDRjs7QUFFQTtFQUNFLE9BQUE7QUFDRjs7QUFHQTtFQUNFLGFBQUE7RUFDQSx1QkFBQTtFQUNBLHNCQUFBO0VBQ0EsbUJBQUE7RUFDQSxTQUFBO0VBQ0EsZUFBQTtBQUFGOztBQUdBO0VBQ0UsYUFBQTtFQUNBLHVCQUFBO0VBQ0EsbUJBQUE7RUFDQSxTQUFBO0FBQUY7O0FBR0E7RUFDRSxhQUFBO0VBQ0EsdUJBQUE7RUFDQSxtQkFBQTtFQUNBLHNCQUFBO0FBQUY7O0FBR0E7RUFDRSxhQUFBO0VBQ0Esc0JBQUE7RUFDQSxzQkFBQTtFQUNBLFlBQUE7QUFBRjs7QUFHQTtFQUNFLGFBQUE7QUFBRjs7QUFHQTtFQUNFLDhCQUFBO0FBQUYiLCJmaWxlIjoiYXBwLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiOmhvc3Qge1xuICBkaXNwbGF5OiBibG9jaztcbiAgcGFkZGluZzogMXJlbTtcbiAgaGVpZ2h0OiBjYWxjKDEwMHZoIC0gMnJlbSk7XG59XG5cbi5yZ2Jfd2hlZWwge1xuICBiYWNrZ3JvdW5kOiBjb25pYy1ncmFkaWVudChyZWQsIHllbGxvdywgbGltZSwgYXF1YSwgYmx1ZSwgbWFnZW50YSwgcmVkKTtcbiAgb3BhY2l0eTogNTAlO1xufVxuXG4uYWJzb2x1dGUge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMDtcbiAgbGVmdDogMDtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwJTtcbn1cblxuLmhvbGRpbmdfcGFyZW50IHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG59XG5cbi5zdGlja3lfdG9wIHtcbiAgcG9zaXRpb246IHN0aWNreTtcbiAgdG9wOiAwO1xuICB3aWR0aDogMTAwJTtcbiAgei1pbmRleDogMTA7XG59XG5cbi5jb2x1bW5zIHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IHJvdztcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbn1cblxuLmNvbHVtbiB7XG4gIGZsZXg6IDE7XG5cbn1cblxuLmZsZXhfY2FyZHMge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgZ2FwOiAxcmVtO1xuICBmbGV4LXdyYXA6IHdyYXA7XG59XG5cbi5mbGV4X2NlbnRlciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBnYXA6IDFyZW07XG59XG5cbi5mbGV4X2NlbnRlcl9jb2x1bW4ge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbn1cblxuLmZsZXhfcm93cyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGFsaWduLXNlbGY6IGZsZXgtc3RhcnQ7XG4gIGhlaWdodDogMTAwJTtcbn1cblxuYXBwLWF1dG8tc2NhbGUge1xuICBwYWRkaW5nOiAxcmVtO1xufVxuXG4udGFiX2dyb3VwX2hlaWdodCB7XG4gIG1heC1oZWlnaHQ6IGNhbGMoMTAwdmggLSA0cmVtKTtcbn1cbiJdfQ== */"], changeDetection: 0 });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AppComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
         args: [{
@@ -574,7 +606,7 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineCompo
                 styleUrls: ['./app.component.scss'],
                 changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectionStrategy"].OnPush
             }]
-    }], function () { return [{ type: _array_sort_pipe__WEBPACK_IMPORTED_MODULE_6__["ArraySortPipe"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"] }]; }, { image: [{
+    }], function () { return [{ type: _array_sort_pipe__WEBPACK_IMPORTED_MODULE_7__["ArraySortPipe"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"] }, { type: _angular_cdk_clipboard__WEBPACK_IMPORTED_MODULE_8__["Clipboard"] }]; }, { image: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"],
             args: ['targetImage']
         }], canvas: [{
@@ -647,6 +679,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/card */ "Wp6s");
 /* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/icon */ "NFeN");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
+/* harmony import */ var _angular_cdk_clipboard__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/cdk/clipboard */ "UXJo");
+
 
 
 
@@ -687,7 +721,8 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
             _angular_material_tabs__WEBPACK_IMPORTED_MODULE_12__["MatTabsModule"],
             _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardModule"],
             _angular_material_icon__WEBPACK_IMPORTED_MODULE_14__["MatIconModule"],
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_15__["HttpClientModule"]
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_15__["HttpClientModule"],
+            _angular_cdk_clipboard__WEBPACK_IMPORTED_MODULE_16__["ClipboardModule"]
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"],
         _array_sort_pipe__WEBPACK_IMPORTED_MODULE_3__["ArraySortPipe"],
@@ -702,7 +737,8 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
         _angular_material_tabs__WEBPACK_IMPORTED_MODULE_12__["MatTabsModule"],
         _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardModule"],
         _angular_material_icon__WEBPACK_IMPORTED_MODULE_14__["MatIconModule"],
-        _angular_common_http__WEBPACK_IMPORTED_MODULE_15__["HttpClientModule"]] }); })();
+        _angular_common_http__WEBPACK_IMPORTED_MODULE_15__["HttpClientModule"],
+        _angular_cdk_clipboard__WEBPACK_IMPORTED_MODULE_16__["ClipboardModule"]] }); })();
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AppModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
         args: [{
@@ -723,12 +759,191 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
                     _angular_material_tabs__WEBPACK_IMPORTED_MODULE_12__["MatTabsModule"],
                     _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardModule"],
                     _angular_material_icon__WEBPACK_IMPORTED_MODULE_14__["MatIconModule"],
-                    _angular_common_http__WEBPACK_IMPORTED_MODULE_15__["HttpClientModule"]
+                    _angular_common_http__WEBPACK_IMPORTED_MODULE_15__["HttpClientModule"],
+                    _angular_cdk_clipboard__WEBPACK_IMPORTED_MODULE_16__["ClipboardModule"]
                 ],
                 providers: [_array_sort_pipe__WEBPACK_IMPORTED_MODULE_3__["ArraySortPipe"]],
                 bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]]
             }]
     }], function () { return [{ type: _angular_material_icon__WEBPACK_IMPORTED_MODULE_14__["MatIconRegistry"] }, { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["DomSanitizer"] }]; }, null); })();
+
+
+/***/ }),
+
+/***/ "sSQm":
+/*!******************************!*\
+  !*** ./src/app/JSONCrush.ts ***!
+  \******************************/
+/*! exports provided: JSONCrush, JSONUncrush */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JSONCrush", function() { return JSONCrush; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JSONUncrush", function() { return JSONUncrush; });
+///////////////////////////////////////////////////////////////////////
+// JSONCrush by Frank Force [MIT] https://github.com/KilledByAPixel/JSONCrush
+///////////////////////////////////////////////////////////////////////
+/* tslint:disable */
+// @ts-nocheck
+// ==ClosureCompiler==
+// @compilation_level ADVANCED_OPTIMIZATIONS
+// @language_out ECMASCRIPT_2019
+// @js_externs JSONCrush, JSONUncrush, JSONCrushSwap
+// @output_file_name JSONCrush.min.js
+// ==/ClosureCompiler==
+const JSONCrush = (string, maxSubstringLength = 50) => {
+    const delimiter = '\u0001'; // used to split parts of crushed string
+    const JSCrush = (string, replaceCharacters) => {
+        // JSCrush Algorithm (repleace repeated substrings with single characters)
+        let replaceCharacterPos = replaceCharacters.length;
+        let splitString = '';
+        const ByteLength = (string) => encodeURI(encodeURIComponent(string)).replace(/%../g, 'i').length;
+        const HasUnmatchedSurrogate = (string) => {
+            // check ends of string for unmatched surrogate pairs
+            let c1 = string.charCodeAt(0);
+            let c2 = string.charCodeAt(string.length - 1);
+            return (c1 >= 0xDC00 && c1 <= 0xDFFF) || (c2 >= 0xD800 && c2 <= 0xDBFF);
+        };
+        // count instances of substrings
+        let substringCount = {};
+        for (let substringLength = 2; substringLength < maxSubstringLength; substringLength++)
+            for (let i = 0; i < string.length - substringLength; ++i) {
+                let substring = string.substr(i, substringLength);
+                // don't recount if already in list
+                if (substringCount[substring])
+                    continue;
+                // prevent breaking up unmatched surrogates
+                if (HasUnmatchedSurrogate(substring))
+                    continue;
+                // count how many times the substring appears
+                let count = 1;
+                for (let substringPos = string.indexOf(substring, i + substringLength); substringPos >= 0; ++count)
+                    substringPos = string.indexOf(substring, substringPos + substringLength);
+                // add to list if it appears multiple times
+                if (count > 1)
+                    substringCount[substring] = count;
+            }
+        while (true) // loop while string can be crushed more
+         {
+            // get the next character that is not in the string
+            for (; replaceCharacterPos-- && string.includes(replaceCharacters[replaceCharacterPos]);) { }
+            if (replaceCharacterPos < 0)
+                break; // ran out of replacement characters
+            let replaceCharacter = replaceCharacters[replaceCharacterPos];
+            // find the longest substring to replace
+            let bestSubstring;
+            let bestLengthDelta = 0;
+            let replaceByteLength = ByteLength(replaceCharacter);
+            for (let substring in substringCount) {
+                // calculate change in length of string if it substring was replaced
+                let count = substringCount[substring];
+                let lengthDelta = (count - 1) * ByteLength(substring) - (count + 1) * replaceByteLength;
+                if (!splitString.length)
+                    lengthDelta -= ByteLength(delimiter); // include the delimiter length
+                if (lengthDelta <= 0)
+                    delete substringCount[substring];
+                else if (lengthDelta > bestLengthDelta) {
+                    bestSubstring = substring;
+                    bestLengthDelta = lengthDelta;
+                }
+            }
+            if (!bestSubstring)
+                break; // string can't be compressed further
+            // create new string with the split character
+            string = string.split(bestSubstring).join(replaceCharacter) + replaceCharacter + bestSubstring;
+            splitString = replaceCharacter + splitString;
+            // update substring count list after the replacement
+            let newSubstringCount = {};
+            for (let substring in substringCount) {
+                // make a new substring with the replacement
+                let newSubstring = substring.split(bestSubstring).join(replaceCharacter);
+                // count how many times the new substring appears
+                let count = 0;
+                for (let i = string.indexOf(newSubstring); i >= 0; ++count)
+                    i = string.indexOf(newSubstring, i + newSubstring.length);
+                // add to list if it appears multiple times
+                if (count > 1)
+                    newSubstringCount[newSubstring] = count;
+            }
+            substringCount = newSubstringCount;
+        }
+        return { a: string, b: splitString };
+    };
+    // create a string of replacement characters
+    let characters = [];
+    // prefer replacing with characters that will not be escaped by encodeURIComponent
+    const unescapedCharacters = `-_.!~*'()`;
+    for (let i = 127; --i;) {
+        if ((i >= 48 && i <= 57) || // 0-9
+            (i >= 65 && i <= 90) || // A-Z
+            (i >= 97 && i <= 122) || // a-z
+            unescapedCharacters.includes(String.fromCharCode(i)))
+            characters.push(String.fromCharCode(i));
+    }
+    // pick from extended set last
+    for (let i = 32; i < 255; ++i) {
+        let c = String.fromCharCode(i);
+        if (c != '\\' && !characters.includes(c))
+            characters.unshift(c);
+    }
+    // remove delimiter if it is found in the string
+    string = string.replace(new RegExp(delimiter, 'g'), '');
+    // swap out common json characters
+    string = JSONCrushSwap(string);
+    // crush with JS crush
+    const crushed = JSCrush(string, characters);
+    // insert delimiter between JSCrush parts
+    let crushedString = crushed.a;
+    if (crushed.b.length)
+        crushedString += delimiter + crushed.b;
+    // fix issues with some links not being recognized properly
+    crushedString += '_';
+    // encode URI
+    return encodeURIComponent(crushedString);
+};
+const JSONUncrush = (string) => {
+    // string must be a decoded URI component, searchParams.get() does this automatically
+    // remove last character
+    string = string.substring(0, string.length - 1);
+    // unsplit the string using the delimiter
+    const stringParts = string.split('\u0001');
+    // JSUncrush algorithm
+    let uncrushedString = stringParts[0];
+    if (stringParts.length > 1) {
+        let splitString = stringParts[1];
+        for (let character of splitString) {
+            // split the string using the current splitCharacter
+            let splitArray = uncrushedString.split(character);
+            // rejoin the string with the last element from the split
+            uncrushedString = splitArray.join(splitArray.pop());
+        }
+    }
+    // unswap the json characters in reverse direction
+    return JSONCrushSwap(uncrushedString, 0);
+};
+const JSONCrushSwap = (string, forward = 1) => {
+    // swap out characters for lesser used ones that wont get escaped
+    const swapGroups = [
+        ['"', "'"],
+        ["':", "!"],
+        [",'", "~"],
+        ['}', ")", '\\', '\\'],
+        ['{', "(", '\\', '\\'],
+    ];
+    const Swap = (string, g) => {
+        let regex = new RegExp(`${(g[2] ? g[2] : '') + g[0]}|${(g[3] ? g[3] : '') + g[1]}`, 'g');
+        return string.replace(regex, $1 => ($1 === g[0] ? g[1] : g[0]));
+    };
+    // need to be able to swap characters in reverse direction for uncrush
+    if (forward)
+        for (let i = 0; i < swapGroups.length; ++i)
+            string = Swap(string, swapGroups[i]);
+    else
+        for (let i = swapGroups.length; i--;)
+            string = Swap(string, swapGroups[i]);
+    return string;
+};
 
 
 /***/ }),
