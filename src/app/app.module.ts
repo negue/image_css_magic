@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import {BrowserModule, DomSanitizer} from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -11,6 +11,10 @@ import {MatInputModule} from '@angular/material/input';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AutoScaleComponent } from './auto-scale/auto-scale.component';
 import { ValueOrDefaultPipe } from './auto-scale/value-or-default.pipe';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatCardModule} from '@angular/material/card';
+import {MatIconModule, MatIconRegistry} from '@angular/material/icon';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,9 +30,24 @@ import { ValueOrDefaultPipe } from './auto-scale/value-or-default.pipe';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatTabsModule,
+    MatCardModule,
+    MatIconModule,
+    HttpClientModule
   ],
   providers: [ArraySortPipe],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(
+    private iconRegistry: MatIconRegistry,
+    private sanitizer: DomSanitizer
+  ) {
+    for (const icon of ['search']) {
+      iconRegistry.addSvgIcon(icon, sanitizer.bypassSecurityTrustResourceUrl(
+        `./assets/material_icons/${icon}.svg`
+      ));
+    }
+  }
+}

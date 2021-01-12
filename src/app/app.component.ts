@@ -8,7 +8,7 @@ import {
   ViewChild
 } from '@angular/core';
 import { BehaviorSubject, combineLatest, Subject } from 'rxjs';
-import { debounceTime, map, takeUntil } from 'rxjs/operators';
+import {debounceTime, map, takeUntil, tap} from 'rxjs/operators';
 import { ArraySortPipe } from './array-sort-pipe';
 import { toPng } from 'html-to-image';
 import * as localforage from 'localforage';
@@ -141,6 +141,8 @@ export class AppComponent implements OnInit, OnDestroy {
   @ViewChild('holdingElement')
   holding: ElementRef<HTMLDivElement> | null = null;
 
+  public downloadButtonEnabled = false;
+
   public imagePath = '';
 
   public optionsState: OptionsState = DEFAULT_OPTIONS_STATE;
@@ -158,6 +160,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
       if (typeof this.fr.result === 'string') {
         this.imagePath = this.fr.result;
+        this.downloadButtonEnabled = false;
         this.cd.detectChanges();
 
         setTimeout(() => {
@@ -177,6 +180,10 @@ export class AppComponent implements OnInit, OnDestroy {
       this.updateOtherOptionsSubject$
     ]).pipe(
       takeUntil(this._destroy$),
+      tap(() => {
+        this.downloadButtonEnabled = false;
+        this.cd.markForCheck();
+      }),
       debounceTime(2500)
     ).subscribe(() => {
       if (!this.holding?.nativeElement){
@@ -185,6 +192,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
       localforage.setItem('options_state', this.optionsState);
       localforage.setItem('css_filters', this.cssFilterSubject$.value);
+
 
       toPng(this.holding?.nativeElement).then(dataPath => {
 
@@ -197,6 +205,8 @@ export class AppComponent implements OnInit, OnDestroy {
           if (ctx) {
             ctx.clearRect(0, 0, canvas?.width ?? 0, canvas?.height ?? 0);
             ctx.drawImage(img, 0, 0);
+
+            this.downloadButtonEnabled = true;
             this.cd.detectChanges();
           }
         };
@@ -228,8 +238,14 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   downloadToImage(canvasElement: HTMLCanvasElement): void {
+    const fileName = prompt('Filename?');
+
+    if (!fileName) {
+      return;
+    }
+
     var link = document.createElement('a');
-    link.download = 'filename.png';
+    link.download = `${fileName}.png`;
     link.href = canvasElement.toDataURL();
     link.click();
   }

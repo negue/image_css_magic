@@ -1,121 +1,155 @@
-<div class="sticky_top columns">
-  <div class="column flex_center">
-    <input id="src" type="file" (change)="displaySelectedImage(inputElement)" #inputElement/>
-
-    <br>
-
-    <app-auto-scale [width]="300" [height]="200"
-    >
-      <div class="holding_parent"
-           [style.filter]="cssFilterString$|async" #holdingElement>
-        <div class="absolute"
-             [style.opacity.%]="optionsState.opacity"
-             [style]="optionsState.useCustomCssAboveImage ? optionsState.customCssAboveImage : null"
-             [style.mask-image]="optionsState.useMask ? 'url('+imagePath+')' : null"
-             [style.-webkit-mask-image]="optionsState.useMask ? 'url('+imagePath+')' : null">
-
-        </div>
-
-        <img #targetImage [src]="imagePath"/>
-
-        <div class="absolute"
-             style="z-index: -1;"
-             [style]="optionsState.useCustomCssBelowImage ? optionsState.customCssBelowImage : null">
-
-        </div>
-
-      </div>
-    </app-auto-scale>
-  </div>
-
-  <div class="column flex_center">
-    <h3>Created Image Preview</h3>
-        <app-auto-scale [width]="300" [height]="200">
-
-      <canvas #canvasElement class="zoom_out"
-              [width]="targetImage.width"
-              [height]="targetImage.height"></canvas>
-        </app-auto-scale>
-    <button mat-raised-button color="accent"
-            (click)="downloadToImage(canvasElement)">
-      download
-    </button>
-  </div>
-
-</div>
-
 <div class="columns">
+  <div class="column flex_cards sticky_top" style="align-self: flex-start;">
+    <mat-card class="example-card">
+      <mat-card-header>
+
+        <mat-card-title class="flex_center">
+          Source
+          <button mat-stroked-button color="primary" (click)="inputElement.click()">
+            <mat-icon svgIcon="search"></mat-icon>
+            Open Image
+          </button>
+        </mat-card-title>
+      </mat-card-header>
+
+      <app-auto-scale [width]="200" [height]="200"
+                      mat-card-image
+      >
+
+        <img  [src]="imagePath"/>
+      </app-auto-scale>
+    </mat-card>
+
+    <input id="src" type="file" (change)="displaySelectedImage(inputElement)"
+           #inputElement style="display: none"/>
+
+    <canvas #canvasElement class="zoom_out"
+            style="display: none"
+            [width]="targetImage.width"
+            [height]="targetImage.height"></canvas>
+
+
+    <mat-card class="example-card">
+      <mat-card-header>
+
+        <mat-card-title class="flex_center">
+          with Effects
+
+          <button mat-stroked-button color="accent"
+                  [disabled]="!downloadButtonEnabled"
+                  (click)="downloadToImage(canvasElement)">
+            Download
+          </button>
+        </mat-card-title>
+      </mat-card-header>
+
+      <app-auto-scale [width]="200" [height]="200"
+      >
+        <div class="holding_parent"
+             [style.filter]="cssFilterString$|async" #holdingElement>
+          <div class="absolute"
+               [style.opacity.%]="optionsState.opacity"
+               [style]="optionsState.useCustomCssAboveImage ? optionsState.customCssAboveImage : null"
+               [style.mask-image]="optionsState.useMask ? 'url('+imagePath+')' : null"
+               [style.-webkit-mask-image]="optionsState.useMask ? 'url('+imagePath+')' : null">
+
+          </div>
+
+          <img #targetImage [src]="imagePath"/>
+
+          <div class="absolute"
+               style="z-index: -1;"
+               [style]="optionsState.useCustomCssBelowImage ? optionsState.customCssBelowImage : null">
+
+          </div>
+
+        </div>
+      </app-auto-scale>
+    </mat-card>
+
+  </div>
+
   <div class="column">
 
-    <ng-container *ngIf="cssFilterArray$| async as filterArray">
-      <div *ngFor="let cssFilterEntry of filterArray; trackBy: trackByFilter"
-      >
-        <mat-checkbox [(ngModel)]="cssFilterEntry.enabled"
-                      (change)="updateList()">
-          {{cssFilterEntry.type}}
-        </mat-checkbox>
+    <mat-tab-group class="tab_group_height">
+      <mat-tab label="CSS Filters" class="flex_rows">
+        <ng-container *ngIf="cssFilterArray$| async as filterArray">
+          <div *ngFor="let cssFilterEntry of filterArray; trackBy: trackByFilter"
+          >
+            <mat-checkbox [(ngModel)]="cssFilterEntry.enabled"
+                          (change)="updateList()">
+              {{cssFilterEntry.type}}
+            </mat-checkbox>
 
-        <br>
+            <br>
 
-        <mat-form-field appearance="outline">
-          <mat-label>Value</mat-label>
-          <input type="text" matInput
-                 [(ngModel)]="cssFilterEntry.value"
-                 (change)="updateList()">
-        </mat-form-field>
-
-
-        <mat-form-field appearance="outline">
-          <mat-label>Order</mat-label>
-          <input type="number" matInput
-                 [(ngModel)]="cssFilterEntry.order"
-                 (change)="updateList()">
-        </mat-form-field>
-      </div>
-    </ng-container>
-  </div>
-  <div class="column flex_rows">
-    <h3>Custom CSS Above the Image</h3>
-
-    <mat-checkbox [(ngModel)]="optionsState.useMask" (change)="updateOtherOptions()">
-      Use the source image as mask
-    </mat-checkbox>
-    <mat-form-field appearance="outline">
-      <mat-label>Opacity</mat-label>
-      <input type="number" matInput [max]="100" [min]="0"
-             (change)="updateOtherOptions()"
-             [(ngModel)]="optionsState.opacity">
-    </mat-form-field>
-
-    <mat-checkbox [(ngModel)]="optionsState.useCustomCssAboveImage"
-                  (change)="updateOtherOptions()">
-      Use custom CSS above the image
-    </mat-checkbox>
-    <mat-form-field appearance="outline">
-      <mat-label>Custom CSS above the image</mat-label>
-      <textarea matInput style="min-height: 6rem"
-                (change)="updateOtherOptions()"
-                [(ngModel)]="optionsState.customCssAboveImage">
-
-    </textarea>
-    </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Value</mat-label>
+              <input type="text" matInput
+                     [(ngModel)]="cssFilterEntry.value"
+                     (change)="updateList()">
+            </mat-form-field>
 
 
-    <h3>Custom CSS Below the Image</h3>
+            <mat-form-field appearance="outline">
+              <mat-label>Order</mat-label>
+              <input type="number" matInput
+                     [(ngModel)]="cssFilterEntry.order"
+                     (change)="updateList()">
+            </mat-form-field>
+          </div>
+        </ng-container>
+      </mat-tab>
+      <mat-tab label="Overlay & Background">
+        <div class="flex_rows">
+          <h3>Custom CSS Above the Image</h3>
 
+          <mat-checkbox [(ngModel)]="optionsState.useMask" (change)="updateOtherOptions()">
+            Use the source image as mask
+          </mat-checkbox>
+          <mat-form-field appearance="outline">
+            <mat-label>Opacity</mat-label>
+            <input type="number" matInput [max]="100" [min]="0"
+                   (change)="updateOtherOptions()"
+                   [(ngModel)]="optionsState.opacity">
+          </mat-form-field>
 
-    <mat-checkbox [(ngModel)]="optionsState.useCustomCssBelowImage"
-                  (change)="updateOtherOptions()">
-      Use custom CSS below the image
-    </mat-checkbox>
-    <mat-form-field appearance="outline">
-      <mat-label>Custom CSS below the image</mat-label>
-      <textarea matInput style="min-height: 6rem"
-                (change)="updateOtherOptions()"
-                [(ngModel)]="optionsState.customCssBelowImage">
+          <mat-checkbox [(ngModel)]="optionsState.useCustomCssAboveImage"
+                        (change)="updateOtherOptions()">
+            Use custom CSS above the image
+          </mat-checkbox>
+          <mat-form-field appearance="outline">
+            <mat-label>Custom CSS above the image</mat-label>
+            <textarea matInput style="min-height: 6rem"
+                      (change)="updateOtherOptions()"
+                      [(ngModel)]="optionsState.customCssAboveImage">
 
     </textarea>
-    </mat-form-field>
+          </mat-form-field>
+
+
+          <h3>Custom CSS Below the Image</h3>
+
+
+          <mat-checkbox [(ngModel)]="optionsState.useCustomCssBelowImage"
+                        (change)="updateOtherOptions()">
+            Use custom CSS below the image
+          </mat-checkbox>
+          <mat-form-field appearance="outline">
+            <mat-label>Custom CSS below the image</mat-label>
+            <textarea matInput style="min-height: 6rem"
+                      (change)="updateOtherOptions()"
+                      [(ngModel)]="optionsState.customCssBelowImage">
+
+    </textarea>
+          </mat-form-field>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+
   </div>
+
 </div>
+
+
 
