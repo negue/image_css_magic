@@ -269,7 +269,7 @@ export class AppComponent implements OnInit, OnDestroy {
     const urlParams = new URLSearchParams(window.location.search);
     const preset = urlParams.get('preset');
 
-    let data: ShareableLinkData = null;
+    let data: ShareableLinkData|null = null;
 
     if (preset) {
       try {
