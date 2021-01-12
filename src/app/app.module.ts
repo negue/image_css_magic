@@ -15,6 +15,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule, MatIconRegistry} from '@angular/material/icon';
 import {HttpClientModule} from '@angular/common/http';
+import {ClipboardModule} from '@angular/cdk/clipboard';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {HttpClientModule} from '@angular/common/http';
     MatTabsModule,
     MatCardModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    ClipboardModule
   ],
   providers: [ArraySortPipe],
   bootstrap: [AppComponent]

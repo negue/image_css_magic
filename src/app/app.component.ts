@@ -13,6 +13,9 @@ import { ArraySortPipe } from './array-sort-pipe';
 import { toPng } from 'html-to-image';
 import * as localforage from 'localforage';
 
+import {JSONCrush, JSONUncrush} from './JSONCrush';
+import {Clipboard} from '@angular/cdk/clipboard';
+
 interface CssFilterEntry {
   order: number;
   type: string;
@@ -104,6 +107,11 @@ function createDefaultCssFilters(): CssFilterEntry[] {
   ];
 }
 
+interface ShareableLinkData {
+  cssFilters: CssFilterEntry[];
+  options: OptionsState;
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -130,6 +138,8 @@ export class AppComponent implements OnInit, OnDestroy {
     })
   );
 
+
+
   @ViewChild('targetImage')
   image: ElementRef<HTMLImageElement> | null = null;
 
@@ -150,7 +160,8 @@ export class AppComponent implements OnInit, OnDestroy {
   private fr = new FileReader();
 
   constructor(private arraySortingPipe: ArraySortPipe,
-              private cd: ChangeDetectorRef) {
+              private cd: ChangeDetectorRef,
+              private clipboard: Clipboard) {
     this.cssFilterSubject$.next(createDefaultCssFilters());
 
     this.fr.onload = (e) => {
@@ -166,7 +177,7 @@ export class AppComponent implements OnInit, OnDestroy {
         setTimeout(() => {
           this.cd.detectChanges();
           this.updateOtherOptionsSubject$.next(null);
-        }, 120)
+        }, 120);
 
 
         localforage.setItem('current_image', this.imagePath);
@@ -255,10 +266,46 @@ export class AppComponent implements OnInit, OnDestroy {
 
     this.imagePath = lastImage;
 
-    this.optionsState = await localforage.getItem('options_state') ?? DEFAULT_OPTIONS_STATE;
+    const urlParams = new URLSearchParams(window.location.search);
+    const preset = urlParams.get('preset');
 
-    const savedCssFilters = await localforage.getItem<CssFilterEntry[]>('css_filters') ?? createDefaultCssFilters();
+    const uncrushedPreset = JSONUncrush(preset);
+    const data: ShareableLinkData = JSON.parse(uncrushedPreset);
+
+    console.info(data);
+
+    this.optionsState = data?.options
+      ?? await localforage.getItem('options_state')
+      ?? DEFAULT_OPTIONS_STATE;
+
+    const savedCssFilters = data?.cssFilters
+      ?? await localforage.getItem<CssFilterEntry[]>('css_filters')
+      ?? createDefaultCssFilters();
 
     this.cssFilterSubject$.next(savedCssFilters);
+  }
+
+  copyShareLink(): void {
+    const shareableData: ShareableLinkData = {
+      cssFilters: this.cssFilterSubject$.value,
+      options: this.optionsState
+    };
+
+    const json = JSON.stringify(shareableData);
+
+    // JSONCrush
+    const crushedJson = JSONCrush(json);
+
+    const linkToShare = `${location.origin}${location.pathname}?preset=${crushedJson}`;
+
+    console.info({
+      json,
+      jsonLength: json.length,
+      crushedJson,
+      crushedLength: crushedJson.length,
+      linkToShare
+    });
+
+    this.clipboard.copy(linkToShare);
   }
 }
