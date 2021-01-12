@@ -1,8 +1,16 @@
-import {Component, ElementRef, OnDestroy, OnInit, TrackByFunction, ViewChild} from '@angular/core';
-import {BehaviorSubject, combineLatest, Subject} from 'rxjs';
-import {debounceTime, map,  takeUntil} from 'rxjs/operators';
-import {ArraySortPipe} from './array-sort-pipe';
-import {toPng} from 'html-to-image';
+import {
+  ChangeDetectionStrategy, ChangeDetectorRef,
+  Component,
+  ElementRef,
+  OnDestroy,
+  OnInit,
+  TrackByFunction,
+  ViewChild
+} from '@angular/core';
+import { BehaviorSubject, combineLatest, Subject } from 'rxjs';
+import { debounceTime, map, takeUntil } from 'rxjs/operators';
+import { ArraySortPipe } from './array-sort-pipe';
+import { toPng } from 'html-to-image';
 import * as localforage from 'localforage';
 
 interface CssFilterEntry {
@@ -99,7 +107,8 @@ function createDefaultCssFilters(): CssFilterEntry[] {
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit, OnDestroy {
   private cssFilterSubject$ = new BehaviorSubject<CssFilterEntry[]>([]);
@@ -138,7 +147,8 @@ export class AppComponent implements OnInit, OnDestroy {
 
   private fr = new FileReader();
 
-  constructor(private arraySortingPipe: ArraySortPipe) {
+  constructor(private arraySortingPipe: ArraySortPipe,
+              private cd: ChangeDetectorRef) {
     this.cssFilterSubject$.next(createDefaultCssFilters());
 
     this.fr.onload = (e) => {
@@ -148,6 +158,13 @@ export class AppComponent implements OnInit, OnDestroy {
 
       if (typeof this.fr.result === 'string') {
         this.imagePath = this.fr.result;
+        this.cd.detectChanges();
+
+        setTimeout(() => {
+          this.cd.detectChanges();
+          this.updateOtherOptionsSubject$.next(null);
+        }, 120)
+
 
         localforage.setItem('current_image', this.imagePath);
       } else {
@@ -180,6 +197,7 @@ export class AppComponent implements OnInit, OnDestroy {
           if (ctx) {
             ctx.clearRect(0, 0, canvas?.width ?? 0, canvas?.height ?? 0);
             ctx.drawImage(img, 0, 0);
+            this.cd.detectChanges();
           }
         };
       } );

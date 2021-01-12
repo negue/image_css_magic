@@ -3,30 +3,39 @@
     <input id="src" type="file" (change)="displaySelectedImage(inputElement)" #inputElement/>
 
     <br>
-    <div class="holding_parent" [style.filter]="cssFilterString$|async" #holdingElement>
-      <div class="absolute"
-           [style.opacity.%]="optionsState.opacity"
-           [style]="optionsState.useCustomCssAboveImage ? optionsState.customCssAboveImage : null"
-           [style.mask-image]="optionsState.useMask ? 'url('+imagePath+')' : null"
-           [style.-webkit-mask-image]="optionsState.useMask ? 'url('+imagePath+')' : null">
+
+    <app-auto-scale [width]="300" [height]="200"
+    >
+      <div class="holding_parent"
+           [style.filter]="cssFilterString$|async" #holdingElement>
+        <div class="absolute"
+             [style.opacity.%]="optionsState.opacity"
+             [style]="optionsState.useCustomCssAboveImage ? optionsState.customCssAboveImage : null"
+             [style.mask-image]="optionsState.useMask ? 'url('+imagePath+')' : null"
+             [style.-webkit-mask-image]="optionsState.useMask ? 'url('+imagePath+')' : null">
+
+        </div>
+
+        <img #targetImage [src]="imagePath"/>
+
+        <div class="absolute"
+             style="z-index: -1;"
+             [style]="optionsState.useCustomCssBelowImage ? optionsState.customCssBelowImage : null">
+
+        </div>
 
       </div>
-
-      <img #targetImage  [src]="imagePath" />
-
-      <div class="absolute"
-           style="z-index: -1;"
-           [style]="optionsState.useCustomCssBelowImage ? optionsState.customCssBelowImage : null">
-
-      </div>
-
-    </div>
+    </app-auto-scale>
   </div>
 
   <div class="column flex_center">
     <h3>Created Image Preview</h3>
-    <canvas #canvasElement></canvas>
+        <app-auto-scale [width]="300" [height]="200">
 
+      <canvas #canvasElement class="zoom_out"
+              [width]="targetImage.width"
+              [height]="targetImage.height"></canvas>
+        </app-auto-scale>
     <button mat-raised-button color="accent"
             (click)="downloadToImage(canvasElement)">
       download
@@ -40,7 +49,7 @@
 
     <ng-container *ngIf="cssFilterArray$| async as filterArray">
       <div *ngFor="let cssFilterEntry of filterArray; trackBy: trackByFilter"
-     >
+      >
         <mat-checkbox [(ngModel)]="cssFilterEntry.enabled"
                       (change)="updateList()">
           {{cssFilterEntry.type}}
@@ -65,7 +74,7 @@
       </div>
     </ng-container>
   </div>
-  <div class="column flex_rows" >
+  <div class="column flex_rows">
     <h3>Custom CSS Above the Image</h3>
 
     <mat-checkbox [(ngModel)]="optionsState.useMask" (change)="updateOtherOptions()">

@@ -9,11 +9,15 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { AutoScaleComponent } from './auto-scale/auto-scale.component';
+import { ValueOrDefaultPipe } from './auto-scale/value-or-default.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ArraySortPipe
+    ArraySortPipe,
+    AutoScaleComponent,
+    ValueOrDefaultPipe
   ],
   imports: [
     BrowserModule,
