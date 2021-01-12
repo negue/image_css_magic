@@ -421,8 +421,15 @@ class AppComponent {
             this.imagePath = lastImage;
             const urlParams = new URLSearchParams(window.location.search);
             const preset = urlParams.get('preset');
-            const uncrushedPreset = Object(_JSONCrush__WEBPACK_IMPORTED_MODULE_6__["JSONUncrush"])(preset);
-            const data = JSON.parse(uncrushedPreset);
+            let data = null;
+            if (preset) {
+                try {
+                    const uncrushedPreset = Object(_JSONCrush__WEBPACK_IMPORTED_MODULE_6__["JSONUncrush"])(preset);
+                    data = JSON.parse(uncrushedPreset);
+                }
+                catch (_f) {
+                }
+            }
             console.info(data);
             this.optionsState = (_c = (_b = data === null || data === void 0 ? void 0 : data.options) !== null && _b !== void 0 ? _b : yield localforage__WEBPACK_IMPORTED_MODULE_5__["getItem"]('options_state')) !== null && _c !== void 0 ? _c : DEFAULT_OPTIONS_STATE;
             const savedCssFilters = (_e = (_d = data === null || data === void 0 ? void 0 : data.cssFilters) !== null && _d !== void 0 ? _d : yield localforage__WEBPACK_IMPORTED_MODULE_5__["getItem"]('css_filters')) !== null && _e !== void 0 ? _e : createDefaultCssFilters();
